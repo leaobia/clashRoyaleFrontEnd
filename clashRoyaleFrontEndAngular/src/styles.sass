@@ -1,0 +1,175 @@
+$primary-color: #000
+
+html, body
+  margin: 0
+  padding: 0
+
+
+*, *::before, *::after
+  box-sizing: border-box
+
+
+::-webkit-scrollbar 
+  width: 12px
+
+
+::-webkit-scrollbar-thumb 
+  background-color: #FFA500
+  border-radius: 6px 
+
+
+::-webkit-scrollbar-track 
+  background-color: #4169E1
+
+.container 
+  display: grid
+  place-items: center
+  width: 100vw
+
+
+.header 
+  width: 85%
+  height: 10%
+  background-color:$primary-color
+  z-index: 1
+  position: fixed
+  top:0
+  padding-top:1%
+  padding-left:1%
+
+.header_img
+  height:70%
+  cursor:pointer
+
+.containerImagens
+  background-image: url('/assets/capa.webp')
+  background-size: cover
+  background-position: center
+  height: 60vh
+  width: 100%
+  display: flex
+  align-items: center 
+  justify-content: center
+
+.cartasContainer
+  display: flex
+  flex-wrap: wrap
+  gap:2vw
+  padding-left:5%
+  padding-top:1%
+  height:auto
+
+#modalCarta
+  background: #223549
+  color: #fff
+  border-radius: 8px
+  position: fixed
+  left: 50%
+  padding: 24px
+  top: 50%
+  transform: translate(-50%, -50%)
+  z-index: 11
+  
+
+.overlay 
+  background: #000
+  height: 100vh
+  left: 0
+  opacity: 0.5
+  position: fixed
+  top: 0
+  width: 100vw
+  z-index: 10
+
+.d-none
+  display: none
+
+.d-flex 
+  display: flex
+
+.divRaridadeTipo
+  display: flex
+  font-weight: bold
+  letter-spacing: 3px
+  font-size: 1.5rem
+  align-items: center
+  justify-content: center
+  gap: 20%
+  border-radius: 25px
+
+.comum
+  color: #4169E1
+
+.rara
+  color: #FFA500
+
+.épico
+  color: #702A87
+
+.lendário
+  color: #4ECDC4
+
+.comum2
+  box-shadow: inset 0px 30px 30px 0px #4169E1
+
+.rara2
+  box-shadow: inset 0px 30px 30px 0px #FFA500
+
+.épico2
+  box-shadow: inset 0px 30px 30px 0px #702A87
+
+.lendário2
+  box-shadow: inset 0px 30px 30px 0px #4ECDC4
+
+.conteudoModal
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  width: 100%
+
+.nomeDaCarta
+  font-size: 2rem
+  letter-spacing: 3px
+
+.buttonFecharModal
+  position: absolute
+  right: 0
+  top: 0
+  margin: 1vw
+  border-radius: 50%
+  padding: 1% 1.5%
+  cursor: pointer
+
+.descricaoCarta
+  background-color: #F0F0F0
+  color: #1A1A1A
+  text-align: center
+  padding: 5%
+  border-radius: 10px
+  font-size: 1.1rem
+  border-width: 5px
+  border-style: inset
+  border-color: #8BB7D9
+
+@media screen and (max-width: 600px) 
+  #modalCarta
+    left: 50%
+    top: 50%
+    padding: 20%
+
+  .descricaoCarta
+    font-size: 1rem
+
+  .containerImagens
+    height: 45vh
+
+  .containerImagens img
+    width: 50%
+
+  .cartasContainer
+   display: flex
+   flex-direction: column
+   align-items: center
+
+  
